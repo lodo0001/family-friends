@@ -10,7 +10,6 @@ const Detailview = async ({ params }) => {
     headers: {
       "x-api-key": process.env.DOG_API_KEY,
     },
-    cache: "no-store",
   });
 
   const dog = await response.json();
