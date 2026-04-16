@@ -3,13 +3,15 @@ import { RiArrowLeftSLine } from "react-icons/ri";
 import Link from "next/link";
 import FavoritElement from "@/components/FavoritElement";
 
+export const dynamic = "force-dynamic";
 const Detailview = async ({ params }) => {
-  const { id } = await params;
+  const { id } = params;
 
   const response = await fetch(`https://api.thedogapi.com/v1/breeds/${id}`, {
     headers: {
       "x-api-key": process.env.DOG_API_KEY,
     },
+    cache: "no-store",
   });
 
   const dog = await response.json();
