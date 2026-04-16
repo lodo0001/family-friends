@@ -1,4 +1,4 @@
-import { GoStar } from "react-icons/go";
+import FavoritElement from "../components/FavoritElement";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,9 +16,7 @@ const Dog = ({ id, name, breed, img }) => {
         </div>
       </Link>
 
-      <div className="absolute top-2 right-2 bg-gray-100/20 rounded-full p-1">
-        <GoStar size={18} className="text-white" />
-      </div>
+      <FavoritElement id={id} breed={breed} />
 
       <div className="p-3 pt-4 pb-4">
         <h2 className="text-black text-l font-bold">{name}</h2>

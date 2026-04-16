@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { GoStarFill } from "react-icons/go";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import Link from "next/link";
+import FavoritElement from "@/components/FavoritElement";
 
 const Detailview = async ({ params }) => {
   const { id } = await params;
@@ -38,14 +38,12 @@ const Detailview = async ({ params }) => {
           />
 
           <Link href="/">
-            <button className="absolute top-5 left-5 z-20 bg-white rounded-full p-2">
+            <button className="absolute top-3 left-3 z-20 bg-white rounded-full p-2">
               <RiArrowLeftSLine size={25} className="text-black" />
             </button>
           </Link>
 
-          <div className="absolute top-5 right-5 z-20 bg-gray-100/20 rounded-full p-2">
-            <GoStarFill size={25} className="text-white" />
-          </div>
+          <FavoritElement id={dog.id} breed={dog.name} />
 
           <div className="absolute bottom-6 left-30 -translate-x-1/2 z-20">
             <div className="flex items-center gap-3 px-4 py-2 bg-gray-100/30 backdrop-blur-md rounded-xl text-white">

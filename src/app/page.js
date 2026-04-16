@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Search from "../components/Search";
 import Cards from "../components/Cards";
 
-export default function Home() {
+export default function Home({ searchParams }) {
   return (
     <div className="flex flex-col flex-1 bg-white">
       <Search />
@@ -13,7 +13,7 @@ export default function Home() {
           </div>
         }
       >
-        <Cards />
+        <Cards searchParams={searchParams} />
       </Suspense>
     </div>
   );
