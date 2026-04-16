@@ -3,7 +3,6 @@ import { RiArrowLeftSLine } from "react-icons/ri";
 import Link from "next/link";
 import FavoritElement from "@/components/FavoritElement";
 
-export const dynamic = "force-dynamic";
 const Detailview = async ({ params }) => {
   const { id } = params;
 
