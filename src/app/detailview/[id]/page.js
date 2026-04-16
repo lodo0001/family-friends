@@ -4,7 +4,7 @@ import Link from "next/link";
 import FavoritElement from "@/components/FavoritElement";
 
 const Detailview = async ({ params }) => {
-  const { id } = params;
+  const { id } = await params;
 
   const response = await fetch(`https://api.thedogapi.com/v1/breeds/${id}`, {
     headers: {
